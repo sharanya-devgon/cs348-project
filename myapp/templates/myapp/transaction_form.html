@@ -1,0 +1,31 @@
+<h2>Add / Edit Transaction</h2>
+<form method="post">
+  {% csrf_token %}
+
+  <div class="mb-3">
+    <label for="id_account" class="form-label">Account:</label>
+    {{ form.account }}
+  </div>
+
+  <div class="mb-3">
+    <label for="id_category" class="form-label">Category:</label>
+    {{ form.category }}
+  </div>
+
+  <div class="mb-3">
+    <label for="id_amount" class="form-label">Amount:</label>
+    {{ form.amount }}
+  </div>
+
+  <div class="mb-3">
+    <label for="id_description" class="form-label">Description:</label>
+    {{ form.description }}
+  </div>
+
+  <div class="mb-3">
+    <label for="id_transaction_date" class="form-label">Date:</label>
+    {{ form.transaction_date }}
+  </div>
+
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
